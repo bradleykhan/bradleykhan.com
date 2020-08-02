@@ -1,5 +1,10 @@
-import React from "react"
+import React from "react";
+import { GlobalStyle } from "@styles";
 
-export default function Home() {
-  return <div>Hello world!</div>
-}
+const Main = () => (
+    <>
+        <GlobalStyle />
+    </>
+);
+
+export default Main;
