@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { colours } from "@styles/theme";
+import { Colours } from "@styles/theme";
 
 const GlobalStyle = createGlobalStyle`
     html {
@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         width: 100%;
         min-height: 100%;
-        background-color: ${colours.grey};
+        background-color: ${Colours.grey};
         margin: 0;
     }
 `

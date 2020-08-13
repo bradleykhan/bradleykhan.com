@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components"
 import anime from "animejs";
-import { colours, centerFlex } from "@styles";
+import { centerFlex, Colours, FontSizes } from "@styles";
 
 const Center = styled.div`
     ${centerFlex};
@@ -12,8 +12,8 @@ const Center = styled.div`
 
 const Title = styled.h1`
     font-family: Roboto Condensed, sans-serif;
-    font-size: 32px;
-    color: ${colours.orange};
+    font-size: ${FontSizes.title};
+    color: ${Colours.orange};
     text-align: center;
     font-weight: normal;
     width: 100%;
@@ -30,8 +30,6 @@ const SVG = styled.div`
 `
 
 const Hello = ({ finishLoading }) => {
-    const [isMounted, setIsMounted] = useState(false);
-
     const animate = () => {
         const loader = anime.timeline({
             complete: () => finishLoading()
@@ -60,12 +58,12 @@ const Hello = ({ finishLoading }) => {
                 targets: "#part3",
                 scale: 60,
                 duration: 500,
-                easing: "easeInQuart"
+                easing: "easeInOutCirc"
             }, "+=200")
             .add({
                 targets: '#part4',
                 duration: 500,
-                easing: 'easeInOutQuart',
+                easing: 'easeInOutCirc',
                 scale: 0
             });
     }
@@ -81,7 +79,7 @@ const Hello = ({ finishLoading }) => {
                 <Title className="part2">I'm Bradley</Title>
                 <SVG className="part2">
                     <svg viewBox="0 0 100 100" id="part3">
-                        <circle cx="50" cy="50" r="1.8" fill={colours.orange} />
+                        <circle cx="50" cy="50" r="1.8" fill={Colours.orange} />
                     </svg>
                 </SVG>
             </div>
