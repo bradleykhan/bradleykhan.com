@@ -10,9 +10,9 @@ const GlobalStyle = createGlobalStyle`
     body {
         width: 100%;
         min-height: 100%;
-        background-color: ${Colours.grey};
+        background-color: ${Colours.darkgrey};
         margin: 0;
     }
 `
 
-export default GlobalStyle; 
+export default GlobalStyle;

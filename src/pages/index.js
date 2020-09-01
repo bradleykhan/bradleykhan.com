@@ -1,14 +1,20 @@
 import React from "react";
+import { graphql } from "gatsby";
 import { GlobalStyle } from "@styles";
-import { Layout } from "@components";
+import { Layout, Hello, Goodbye } from "@components";
 
 const Main = () => (
     <>
         <GlobalStyle />
         <Layout>
-            // main page components go here
+            <Hello />
+            <Goodbye />
         </Layout>
     </>
 );
+
+// export const query = graphql`
+//     # query goes here
+// `;
 
 export default Main;

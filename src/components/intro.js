@@ -8,6 +8,7 @@ const Center = styled.div`
     position: fixed;
     width: 100%;
     height: 100%;
+    background-color: ${Colours.darkgrey};
 `
 
 const Title = styled.h1`
@@ -25,14 +26,14 @@ const SVG = styled.div`
     height: 100px;
     position: absolute;
     top: 42%;
-    left: 64%;
+    left: 65%;
     opacity: 0;
 `
 
-const Hello = ({ finishLoading }) => {
+const Intro = ({ finishLoading }) => {
     const animate = () => {
         const loader = anime.timeline({
-            complete: () => finishLoading()
+            complete: () => setTimeout(finishLoading, 1000)
         });
 
         loader.add({
@@ -49,8 +50,8 @@ const Hello = ({ finishLoading }) => {
             }, "+=2000")
             .add({
                 targets: "#part3",
-                translateY: -35,
-                translateX: -67,
+                translateY: -37,
+                translateX: -69,
                 easing: "easeInOutElastic",
                 duration: () => anime.random(1200, 1800)
             }, "+=2000")
@@ -61,9 +62,9 @@ const Hello = ({ finishLoading }) => {
                 easing: "easeInOutCirc"
             }, "+=200")
             .add({
-                targets: '#part4',
+                targets: "#part4",
                 duration: 500,
-                easing: 'easeInOutCirc',
+                easing: "easeInOutCirc",
                 scale: 0
             });
     }
@@ -75,8 +76,8 @@ const Hello = ({ finishLoading }) => {
     return (
         <Center>
             <div id="part4" style={{ position: "relative" }}>
-                <Title id="part1">Hello!</Title>
-                <Title className="part2">I'm Bradley</Title>
+                <Title id="part1">Hello</Title>
+                <Title className="part2">I&apos;m Bradley</Title>
                 <SVG className="part2">
                     <svg viewBox="0 0 100 100" id="part3">
                         <circle cx="50" cy="50" r="1.8" fill={Colours.orange} />
@@ -87,10 +88,8 @@ const Hello = ({ finishLoading }) => {
     )
 }
 
-export default Hello;
+export default Intro;
 
 // 50px font, 3px r, translateY = -55px, translateX = -105px
 // 54.5, 77 top left
-//<div style={{position: "absolute", border: "1px solid white", top: "50%", left: "50%", height: "5px", width: "5px", display: "none"}}>
-
-//</div>
+// <div style={{position: "absolute", border: "1px solid white", top: "50%", left: "50%", height: "1px", width: "1px"}} />
