@@ -10,17 +10,24 @@ const Container = styled.div`
 `;
 
 const Text = styled.p`
-    color: ${Colours.orange}
+    color: ${Colours.orange};
 `;
 
 const Title = styled.h1`
-    color: ${Colours.orange}
+    color: ${Colours.orange};
 `;
 
-const Hello = ({ data }) => {
+const Button = styled.a`
+    border: 1px solid ${Colours.orange};
+    color: ${Colours.orange};
+    padding: 10px;
+    margin-top: 10px;
+`;
+
+const Contact = ({ data }) => {
     const stuff = data[0].node;
 
-    const { title } = stuff.frontmatter;
+    const { title, buttonText } = stuff.frontmatter;
     const p = stuff.excerpt;
 
     const scrollReveal = useRef(null);
@@ -31,8 +38,9 @@ const Hello = ({ data }) => {
         <Container ref={scrollReveal}>
             <Title>{title}</Title>
             <Text>{p}</Text>
+            <Button>{buttonText}</Button>
         </Container>
     )
 }
 
-export default Hello;
+export default Contact;

@@ -15,6 +15,14 @@ module.exports = {
                     families: ['Roboto Condensed', 'Roboto Slab', 'Source Code Pro']
                 }
             }
-        }
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `markdown-content`,
+                path: `${__dirname}/src/markdown-content`,
+            },
+        },
+        `gatsby-transformer-remark`,
     ],
 }
