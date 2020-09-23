@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import sr from "@utils/scrollreveal";
-import { Title, Heading, Text } from "@styles";
+import { Heading, Subtitle, Text } from "@styles";
 
 const Container = styled.div`
     visibility: hidden;
@@ -13,10 +13,10 @@ const Container = styled.div`
     min-width: 588px;
 `;
 
-const Hello = ({ data }) => {
+const About = ({ data }) => {
     const stuff = data[0].node;
-    const { title, heading } = stuff.frontmatter;
-    const text = stuff.excerpt;
+    const { heading, subtitle } = stuff.frontmatter;
+    const p = stuff.excerpt;
 
     const scrollReveal = useRef(null);
 
@@ -25,10 +25,10 @@ const Hello = ({ data }) => {
     return (
         <Container ref={scrollReveal}>
             <Heading>{heading}</Heading>
-            <Title>{title}</Title>
-            <Text>{text}</Text>
+            <Subtitle>{subtitle}</Subtitle>
+            <Text>{p}</Text>
         </Container>
-    );
+    )
 }
 
-export default Hello;
+export default About;

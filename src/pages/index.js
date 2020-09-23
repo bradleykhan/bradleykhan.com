@@ -1,14 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { GlobalStyle } from "@styles";
-import { Layout, Hello, Contact } from "@components";
+import { Layout, Hello, About, Skills } from "@components";
 
 const Main = ({ data }) => (
   <>
     <GlobalStyle />
     <Layout>
       <Hello data={data.hello.edges}/>
-      <Contact data={data.contact.edges}/>
+      <About data={data.about.edges}/>
+      <Skills data={data.skills.edges}/>
     </Layout>
   </>
 );
@@ -23,6 +24,28 @@ export const pageQuery = graphql`
             title
           }
           excerpt
+        }
+      }
+    }
+    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } } ) {
+      edges {
+        node {
+          frontmatter {
+            heading
+            subtitle
+          }
+          excerpt
+        }
+      }
+    }
+    skills: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/skills/" } } ) {
+      edges {
+        node {
+          frontmatter {
+            heading
+            subtitle
+            skills
+          }
         }
       }
     }
