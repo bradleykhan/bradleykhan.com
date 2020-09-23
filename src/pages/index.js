@@ -19,6 +19,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
+            heading
             title
           }
           excerpt

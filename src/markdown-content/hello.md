@@ -1,5 +1,6 @@
 ---
-title: "Ello m8"
+heading: "HELLO"
+title: "I'm Bradley Khan"
 ---
 
-Hello! I'm Bradley. Insert something deep and meaningful here.
+A front end developer based in London who specialises in building applications and websites. Also loves messing around with new tech.
