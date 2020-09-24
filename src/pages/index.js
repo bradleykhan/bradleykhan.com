@@ -1,12 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { GlobalStyle } from "@styles";
+import { GlobalStyle, Wave } from "@styles";
 import { Layout, Hello, About, Skills } from "@components";
 
 const Main = ({ data }) => (
   <>
     <GlobalStyle />
     <Layout>
+      <Wave />
       <Hello data={data.hello.edges}/>
       <About data={data.about.edges}/>
       <Skills data={data.skills.edges}/>
