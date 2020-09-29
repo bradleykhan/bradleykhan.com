@@ -1,14 +1,13 @@
 import styled from "styled-components";
-import { Colours, FontSizes } from "@styles";
 
 const Nav = styled.nav`
     font-family: "Inter";
-    color: ${Colours.lightgrey};
+    color: var(--lightgrey);
     font-weight: 400;
-    font-size: ${FontSizes.medium};
+    font-size: var(--medium);
     display: flex;
     justify-content: space-between;
-    margin-right: 200px;
+    margin-right: 50px;
 `;
 
 const Ul = styled.ul`
@@ -23,11 +22,11 @@ const Li = styled.li`
 `;
 
 const ListItem = styled.li`
-    margin-left: 200px;
+    margin-left: 50px;
     margin-right: auto;
     font-weight: 600;
-    color: ${Colours.white};
-    font-size: ${FontSizes.bigger};
+    color: var(--white);
+    font-size: var(--bigger);
 `;
 
 export { Ul, Li, ListItem };

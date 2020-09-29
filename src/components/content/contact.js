@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import sr from "@utils/scrollreveal";
-import { Colours } from "@styles";
 
 const Container = styled.div`
     width: 80%;
@@ -10,16 +9,16 @@ const Container = styled.div`
 `;
 
 const Text = styled.p`
-    color: ${Colours.orange};
+    color: var(--orange);
 `;
 
 const Title = styled.h1`
-    color: ${Colours.orange};
+    color: var(--orange);
 `;
 
 const Button = styled.a`
-    border: 1px solid ${Colours.orange};
-    color: ${Colours.orange};
+    border: 1px solid var(--orange);
+    color: var(--orange);
     padding: 10px;
     margin-top: 10px;
 `;

@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components"
 import anime from "animejs";
-import { centerFlex, Colours, FontSizes } from "@styles";
+import { centerFlex } from "@styles";
 
 const Center = styled.div`
     ${centerFlex};
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: ${Colours.darkgrey};
+    background-color: var(--darkgrey);
 `
 
 const Title = styled.h1`
     font-family: Roboto Condensed, sans-serif;
-    font-size: ${FontSizes.title};
-    color: ${Colours.orange};
+    font-size: var(--title);
+    color: var(--orange);
     text-align: center;
     font-weight: normal;
     width: 100%;
@@ -80,7 +80,7 @@ const Intro = ({ finishLoading }) => {
                 <Title className="part2">I&apos;m Bradley</Title>
                 <SVG className="part2">
                     <svg viewBox="0 0 100 100" id="part3">
-                        <circle cx="50" cy="50" r="1.8" fill={Colours.orange} />
+                        <circle cx="50" cy="50" r="1.8" fill="#FF8311"/>
                     </svg>
                 </SVG>
             </div>

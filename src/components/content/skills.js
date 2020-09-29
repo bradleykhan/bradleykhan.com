@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import sr from "@utils/scrollreveal";
-import { Subtitle, Heading, Colours, FontSizes } from "@styles";
+import { Subtitle, Heading } from "@styles";
 
 const Container = styled.div`
     visibility: hidden;
@@ -14,8 +14,7 @@ const Container = styled.div`
 `;
 
 const Skill = styled.div`
-    border-radius: 5px;
-    background-color: ${Colours.grey};
+    background-color: var(--grey);
     height: 26px;
     width: auto;
     padding-left: 10px;
@@ -27,8 +26,8 @@ const Skill = styled.div`
 const Text = styled.p`
     font-family: "Inter";
     font-weight: 400;
-    font-size: ${FontSizes.small};
-    color: ${Colours.lightgrey};
+    font-size: var(--small);
+    color: var(--lightgrey);
     padding: 0;
     line-height: 0px;
 `;

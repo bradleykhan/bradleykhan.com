@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { Colours, FontSizes } from "@styles";
 
 const Text = styled.p`
-    color: ${Colours.lightgrey};
+    color: var(--lightgrey);
     font-family: "Inter";
-    font-size: ${FontSizes.medium};
+    font-size: var(--medium);
     font-weight: 400;
     line-height: 24px;
 `;

@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { Colours, FontSizes } from "@styles";
 
 const Heading = styled.h2`
-    color: ${Colours.orange};
+    color: var(--orange);
     font-family: "Inter";
-    font-size: ${FontSizes.medium};
+    font-size: var(--medium);
     font-weight: 600;
     letter-spacing: 4px;
 `;

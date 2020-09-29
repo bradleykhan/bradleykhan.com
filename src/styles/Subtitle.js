@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { Colours, FontSizes } from "@styles";
 
 const Subtitle = styled.h2`
-    color: ${Colours.white};
+    color: var(--white);
     font-family: "Inter";
-    font-size: ${FontSizes.bigger};
+    font-size: var(--bigger);
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 20px;
