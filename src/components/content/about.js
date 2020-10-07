@@ -3,14 +3,18 @@ import styled from "styled-components";
 import sr from "@utils/scrollreveal";
 import { Heading, Subtitle, Text } from "@styles";
 
-const Container = styled.div`
-    visibility: hidden;
+const Div = styled.div`
+    height: 75vh;
+    grid-column: 2;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1px 1px;
-    margin: auto;
-    width: 30%;
-    min-width: 588px;
+    align-self: center;
+`;
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 `;
 
 const About = ({ data }) => {
@@ -23,11 +27,13 @@ const About = ({ data }) => {
     useEffect(() => sr.reveal(scrollReveal.current), []);
 
     return (
-        <Container ref={scrollReveal}>
-            <Heading>{heading}</Heading>
-            <Subtitle>{subtitle}</Subtitle>
-            <Text>{p}</Text>
-        </Container>
+        <Div ref={scrollReveal}>
+            <Container>
+                <Heading>{heading}</Heading>
+                <Subtitle>{subtitle}</Subtitle>
+                <Text>{p}</Text>
+            </Container>
+        </Div>
     )
 }
 

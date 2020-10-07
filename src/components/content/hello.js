@@ -3,14 +3,15 @@ import styled from "styled-components";
 import sr from "@utils/scrollreveal";
 import { Title, Heading, Text } from "@styles";
 
-const Container = styled.div`
-    visibility: hidden;
+const Div = styled.div`
+    height: 100vh;
+    grid-column: 2;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1px 1px;
-    margin: auto;
-    width: 30%;
-    min-width: 588px;
+    max-width: 512px;
+`;
+
+const Container = styled.div`
+    margin-top: 25vh;
 `;
 
 const Hello = ({ data }) => {
@@ -23,11 +24,13 @@ const Hello = ({ data }) => {
     useEffect(() => sr.reveal(scrollReveal.current), []);
 
     return (
-        <Container ref={scrollReveal}>
-            <Heading>{heading}</Heading>
-            <Title>{title}</Title>
-            <Text>{text}</Text>
-        </Container>
+        <Div ref={scrollReveal}>
+            <Container>
+                <Heading>{heading}</Heading>
+                <Title>{title}</Title>
+                <Text>{text}</Text>
+            </Container>
+        </Div>
     );
 }
 

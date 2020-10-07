@@ -3,20 +3,21 @@ import styled from "styled-components";
 import sr from "@utils/scrollreveal";
 import { Subtitle, Heading } from "@styles";
 
-const Container = styled.div`
-    visibility: hidden;
+const Div = styled.div`
+    grid-column: 2;
+    height: 75vh;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1px 1px;
-    margin: auto;
-    width: 30%;
-    min-width: 588px;
+`;
+
+const Container = styled.div`
+    align-self: center;
 `;
 
 const Skill = styled.div`
     background-color: var(--grey);
+    border-radius: 5px;
     height: 26px;
-    width: auto;
+    width: fit-content;
     padding-left: 10px;
     padding-right: 10px;
     margin: 0;
@@ -33,9 +34,9 @@ const Text = styled.p`
 `;
 
 const SkillsGrid = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 26px 26px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: min-content;
     gap: 12px 12px;
 `;
 
@@ -48,16 +49,29 @@ const Skills = ({ data }) => {
     useEffect(() => sr.reveal(scrollReveal.current), []);
 
     return (
-        <Container ref={scrollReveal}>
-            <Heading>{heading}</Heading>
-            <Subtitle>{subtitle}</Subtitle>
-            <SkillsGrid>
-                {skills.map((skill) => (
-                    <Skill><Text>{skill}</Text></Skill>
-                ))}
-            </SkillsGrid>
-        </Container>
+        <Div ref={scrollReveal}>
+            <Container>
+                <Heading>{heading}</Heading>
+                <Subtitle>{subtitle}</Subtitle>
+                <SkillsGrid>
+                    {skills.map((skill) => (
+                        <Skill><Text>{skill}</Text></Skill>
+                    ))}
+                </SkillsGrid>
+            </Container>
+        </Div>
     );
 }
 
 export default Skills;
+
+/*
+
+
+const SkillsGrid = styled.div`
+    display: inline-grid;
+    grid-template-columns: repeat(12, min-content);
+    grid-template-rows: 26px 26px;
+    gap: 12px 12px;
+`;
+*/

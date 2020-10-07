@@ -1,4 +1,4 @@
-export { default as Layout } from "./layout";
+export { default as Layout, Content } from "./layout";
 export { default as Intro } from "./intro";
 export { default as Hello } from "./content/hello";
 export { default as About } from "./content/about";
