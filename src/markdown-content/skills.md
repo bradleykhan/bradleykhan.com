@@ -13,4 +13,7 @@ skills:
     - Prisma
     - Node.js
     - GraphQL
+    - Microsoft
+    - Debugging
+    - Testing
 ---
