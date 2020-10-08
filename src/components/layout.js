@@ -12,6 +12,12 @@ const Grid = styled.div`
     background-repeat: no-repeat;
     background-size: auto auto;
     background-position: 0% 8%;
+
+    @media (orientation: portrait) and (min-width: 768px) {
+        grid-template-columns: 1fr  minmax(320px, 4fr) 1fr;
+        background-position: 0% 11%;
+        background-size: auto auto;
+    }
 `;
 
 const Layout = ({ children }) => {
