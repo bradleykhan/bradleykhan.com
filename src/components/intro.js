@@ -13,7 +13,7 @@ const Center = styled.div`
 
 const Title = styled.h1`
     font-family: Roboto Condensed, sans-serif;
-    font-size: var(--title);
+    font-size: 32px;
     color: var(--orange);
     text-align: center;
     font-weight: normal;
