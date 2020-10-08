@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
         --white: #FFFFFF;
 
         --biggest: 64px;
+        --biggerer: 40px;
         --bigger: 24px;
         --big: 20px;
         --medium: 16px;
