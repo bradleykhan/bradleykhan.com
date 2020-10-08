@@ -3,9 +3,9 @@ import styled from "styled-components";
 import sr from "@utils/scrollreveal";
 import { Subtitle, Heading } from "@styles";
 
-const Div = styled.div`
+const Div = styled.div`     
     grid-column: 2;
-    height: 75vh;
+    height: 100vh;
     display: grid;
 `;
 

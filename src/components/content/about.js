@@ -4,7 +4,7 @@ import sr from "@utils/scrollreveal";
 import { Heading, Subtitle, Text } from "@styles";
 
 const Div = styled.div`
-    height: 75vh;
+    height: 100vh;
     grid-column: 2;
     display: grid;
     align-self: center;
