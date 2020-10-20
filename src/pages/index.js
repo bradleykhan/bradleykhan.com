@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import { GlobalStyle } from "@styles";
-import { Layout, Hello, About, Skills } from "@components";
+import { Layout, Hello, Role, About, Skills } from "@components";
 
 const Projects = styled.div`
   height: 35vh;
@@ -24,6 +24,9 @@ const Main = ({ data }) => (
     <Layout>
       <Content>
         <Hello data={data.hello.edges}/>
+      </Content>
+      <Role data={data.role.edges}/>
+      <Content>
         <About data={data.about.edges}/>
         <Skills data={data.skills.edges}/>
       </Content>
@@ -36,6 +39,17 @@ const Main = ({ data }) => (
 export const pageQuery = graphql`
   query Content {
     hello: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hello/" } } ) {
+      edges {
+        node {
+          frontmatter {
+            heading
+            title
+          }
+          excerpt
+        }
+      }
+    }
+    role: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/role/" } } ) {
       edges {
         node {
           frontmatter {
@@ -65,6 +79,7 @@ export const pageQuery = graphql`
             subtitle
             skills
           }
+          excerpt
         }
       }
     }
