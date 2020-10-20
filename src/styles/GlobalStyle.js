@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
         --medium: 16px;
         --small: 14px;
         --smallest: 12px;
+        --smol: 10px;
 
         --offset-left: 30%;
         --offset-top: 25%;
