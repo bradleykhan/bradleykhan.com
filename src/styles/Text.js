@@ -7,6 +7,7 @@ const Text = styled.p`
     font-weight: 400;
     letter-spacing: 0.5px;
     line-height: 24px;
+    margin-bottom: 20px;
 
     @media (min-width: 768px) {
         font-size: var(--medium);
