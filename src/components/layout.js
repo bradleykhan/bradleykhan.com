@@ -10,12 +10,11 @@ const Grid = styled.div`
     grid-template-columns: 2fr minmax(320px, 4fr) 2fr;
     background-image: url(${wave});
     background-repeat: no-repeat;
-    background-size: auto auto;
-    background-position: 0% 8%;
+    background-size: 100vw 100vh;
 
     @media (orientation: portrait) and (min-width: 768px) {
-        grid-template-columns: 1fr  minmax(320px, 4fr) 1fr;
-        background-position: 0% 11%;
+        grid-template-columns: 1fr minmax(320px, 4fr) 1fr;
+        background-position: 0% 7%;
         background-size: auto auto;
     }
 `;
