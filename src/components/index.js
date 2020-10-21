@@ -5,3 +5,5 @@ export { default as Role } from "./content/role";
 export { default as About } from "./content/about";
 export { default as Skills } from "./content/skills";
 export { default as Contact } from "./content/contact";
+export { default as Projects } from "./content/projects";
+export { default as Blog } from "./content/blog";
