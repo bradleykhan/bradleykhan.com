@@ -27,7 +27,7 @@ const About = ({ data }) => {
     useEffect(() => sr.reveal(scrollReveal.current), []);
 
     return (
-        <Div ref={scrollReveal}>
+        <Div id="about" ref={scrollReveal}>
             <Container>
                 <Heading>{heading}</Heading>
                 <Subtitle>{subtitle}</Subtitle>

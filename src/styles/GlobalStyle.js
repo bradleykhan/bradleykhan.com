@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     html {
         width: 100%;
         box-sizing: border-box;
+        scroll-behavior: smooth;
     }
 
     body {

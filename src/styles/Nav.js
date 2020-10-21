@@ -20,12 +20,19 @@ const Ul2 = styled.ul`
     list-style-type: none;
     margin-top: 30px;
     margin-left: 50px;
+    @media (orientation: portrait) and (max-width: 500px) {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 0;
+    }
 `;
 
 const Li = styled.li`
     margin-left: 10px;
     margin-right: 50px;
-    font-size: var(--smallest);
+    font-size: var(--smol);
     font-weight: 600;
     color: var(--orange);
     letter-spacing: 4px;
@@ -38,25 +45,34 @@ const ListItem = styled.li`
     font-size: var(--bigger);
 `;
 
-const Div = styled.div`
+const GridItem = styled.div`
     grid-column: 1 / -1;
     grid-row: 1;
     height: 10vh;
+
+    @media (orientation: portrait) and (max-width: 500px) {
+        height: 20vh;
+    }
+`;
+
+const Anchor = styled.a`
+    text-decoration: inherit;
+    color: inherit;
 `;
 
 const Nav = () => (
-    <Div>
+    <GridItem>
         <NAV>
             <Ul>
                 <ListItem>B K</ListItem>
             </Ul>
             <Ul2>
-                <Li>HOME</Li>
-                <Li>ABOUT</Li>
-                <Li>WORK</Li>
+                <Li><Anchor href="#role">ROLE</Anchor></Li>
+                <Li><Anchor href="#about">ABOUT</Anchor></Li>
+                <Li><Anchor href="#skills">SKILLS</Anchor></Li>
             </Ul2>
         </NAV>
-    </Div>
+    </GridItem>
 )
 
 
