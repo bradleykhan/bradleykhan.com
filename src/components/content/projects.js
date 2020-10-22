@@ -4,12 +4,13 @@ import sr from "@utils/scrollreveal";
 import { Heading } from "@styles";
 
 const Div = styled.div`
-    height: 35vh;
+    height: 70vh;
     grid-column: 2 / span 3;
+    display: grid;
 `;
 
 const Container = styled.div`
-    margin-top: 25vh;
+    align-self: center;
 `;
 
 const Projects = ({ data }) => {

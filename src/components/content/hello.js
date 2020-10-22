@@ -7,11 +7,14 @@ const Div = styled.div`
     height: 100vh;
     grid-column: 2;
     display: grid;
-    max-width: 512px;
 `;
 
 const Container = styled.div`
     margin-top: 25vh;
+`;
+
+const HeroText = styled(Text)`
+    max-width: 512px;
 `;
 
 const Hello = ({ data }) => {
@@ -28,7 +31,7 @@ const Hello = ({ data }) => {
             <Container>
                 <Heading>{heading}</Heading>
                 <Title>{title}</Title>
-                <Text>{text}</Text>
+                <HeroText>{text}</HeroText>
             </Container>
         </Div>
     );

@@ -5,7 +5,7 @@ import { Subtitle, Heading, Text } from "@styles";
 
 const Div = styled.div`     
     grid-column: 2;
-    height: 100vh;
+    height: 70vh;
     display: grid;
 `;
 

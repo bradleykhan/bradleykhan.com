@@ -5,7 +5,6 @@ const Subtitle = styled.h2`
     font-family: "Inter";
     font-size: var(--bigger);
     font-weight: 600;
-    margin-top: 20px;
     margin-bottom: 20px;
     line-height: 36px;
 `;

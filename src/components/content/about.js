@@ -4,17 +4,13 @@ import sr from "@utils/scrollreveal";
 import { Heading, Subtitle, Text } from "@styles";
 
 const Div = styled.div`
-    height: 100vh;
+    height: 70vh;
     grid-column: 2;
     display: grid;
-    align-self: center;
 `;
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    align-self: center;
 `;
 
 const About = ({ data }) => {

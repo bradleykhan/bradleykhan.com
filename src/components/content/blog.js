@@ -4,12 +4,20 @@ import sr from "@utils/scrollreveal";
 import { Heading, BlogCard } from "@styles";
 
 const Div = styled.div`
-    height: 25vh;
+    height: 70vh;
     grid-column: 2 / span 3;
+    display: grid;
 `;
 
 const Container = styled.div`
-    margin-top: 25vh;
+    align-self: center;
+`;
+
+const ComingSoon = styled.p`
+    font-family: "Inter";
+    font-weight: 400;
+    color: var(--orange);
+    font-size: var(--smol);
 `;
 
 const Blog = ({ data }) => {
@@ -25,6 +33,7 @@ const Blog = ({ data }) => {
             <Container>
                 <Heading>{heading}</Heading>
                 <BlogCard />
+                <ComingSoon>Coming soon!</ComingSoon>
             </Container>
         </Div>
     );

@@ -45,7 +45,7 @@ const GridItem = styled.div`
 const Container = styled.div`
     /* Width of the visible content */
     grid-column: 2;
-    margin: auto;
+    align-self: center;
 `;
 
 const Role = ({ data }) => {
@@ -59,7 +59,7 @@ const Role = ({ data }) => {
 
     return (
         <Nav id="role" ref={scrollReveal}>
-            <GridItem >
+            <GridItem>
                 <Container>
                     <Heading>{heading}</Heading>
                     <Subtitle>{title}</Subtitle>
