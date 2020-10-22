@@ -10,7 +10,7 @@ const Div = styled.div`
 `;
 
 const Container = styled.div`
-    margin: auto;
+    align-self: center;
 `;
 
 const Skill = styled.div`
