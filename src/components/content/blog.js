@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import sr from "@utils/scrollreveal";
-import { Heading } from "@styles";
+import { Heading, BlogCard } from "@styles";
 
 const Div = styled.div`
     height: 25vh;
@@ -24,6 +24,7 @@ const Blog = ({ data }) => {
         <Div ref={scrollReveal}>
             <Container>
                 <Heading>{heading}</Heading>
+                <BlogCard />
             </Container>
         </Div>
     );
