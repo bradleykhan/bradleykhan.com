@@ -58,8 +58,8 @@ const Role = ({ data }) => {
     useEffect(() => sr.reveal(scrollReveal.current), []);
 
     return (
-        <Nav id="role">
-            <GridItem ref={scrollReveal}>
+        <Nav id="role" ref={scrollReveal}>
+            <GridItem >
                 <Container>
                     <Heading>{heading}</Heading>
                     <Subtitle>{title}</Subtitle>
