@@ -6,6 +6,7 @@ export { default as Subtitle } from "./Subtitle";
 export { default as Text } from "./Text";
 export { default as Nav } from "./Nav";
 export { default as Wave } from "./Wave";
+export { default as ProjectCard } from "./ProjectCard";
 export { default as BlogCard } from "./BlogCard";
 export { Ul, Li, ListItem } from "./Nav";
 export { centerFlex } from "./mixins";
