@@ -35,6 +35,8 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100%;
         background-color: var(--darkgrey);
         margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 `
 

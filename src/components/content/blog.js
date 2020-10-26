@@ -4,7 +4,7 @@ import sr from "@utils/scrollreveal";
 import { Heading, BlogCard } from "@styles";
 
 const Div = styled.div`
-    height: 70vh;
+    height: 100vh;
     grid-column: 2 / span 3;
     display: grid;
 `;
