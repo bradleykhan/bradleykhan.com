@@ -55,7 +55,7 @@ const Skills = ({ data }) => {
                 <Subtitle>{subtitle}</Subtitle>
                 <SkillsGrid>
                     {skills.map((skill) => (
-                        <Skill><SkillsText>{skill}</SkillsText></Skill>
+                        <Skill key={skill}><SkillsText>{skill}</SkillsText></Skill>
                     ))}
                 </SkillsGrid>
             </Container>
