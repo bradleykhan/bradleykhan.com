@@ -70,6 +70,8 @@ const Nav = () => (
                 <Li><Anchor href="#role">ROLE</Anchor></Li>
                 <Li><Anchor href="#about">ABOUT</Anchor></Li>
                 <Li><Anchor href="#skills">SKILLS</Anchor></Li>
+                <Li><Anchor href="#projects">PROJECTS</Anchor></Li>
+                <Li><Anchor href="#blog">BLOG</Anchor></Li>
             </Ul2>
         </NAV>
     </GridItem>
