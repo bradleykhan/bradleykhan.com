@@ -29,7 +29,7 @@ const Blog = ({ data }) => {
     useEffect(() => sr.reveal(scrollReveal.current), []);
 
     return (
-        <Div ref={scrollReveal}>
+        <Div id="blog" ref={scrollReveal}>
             <Container>
                 <Heading>{heading}</Heading>
                 <BlogCard />

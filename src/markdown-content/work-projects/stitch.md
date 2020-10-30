@@ -1,6 +1,7 @@
 ---
 company: "STITCH"
-logo: "../images/stitch.png"
+logo: "stitch.png"
+date: "01/01/2019"
+maintext: "At Stitch I built the foundations of the new platform powering all of the brands until the Stitch banner."
 ---
-
-At Stitch I basically did this and that.
+My first experience working in a small start-up. Also as the their first engineering hire.
